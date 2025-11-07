@@ -1,0 +1,61 @@
+﻿@use '../abstracts' as *;
+
+//Typography Mixins
+
+@mixin hero-heading {
+  font-size: 70px;
+  font-weight: $font-weight-bold;
+  font-family: $font-heading;
+  line-height: 1.14;
+}
+@mixin heading-1 {
+  font-size: 50px;
+  font-weight: $font-weight-bold;
+  font-family: $font-heading;
+  line-height: 1.2;
+}
+@mixin heading-2 {
+  font-size: 40px;
+  font-weight: $font-weight-bold;
+  font-family: $font-heading;
+  line-height: 1.25;
+}
+@mixin heading-3 {
+  font-size: 30px;
+  font-weight: $font-weight-bold;
+  font-family: $font-heading;
+  line-height: inherit;
+}
+@mixin heading-4 {
+  font-size: 25px;
+  font-weight: $font-weight-bold;
+  font-family: $font-heading;
+  line-height: inherit;
+}
+@mixin heading-5 {
+  font-size: 22px;
+  font-weight: $font-weight-semibold;
+  font-family: $font-heading;
+  line-height: inherit;
+}
+@mixin heading-6 {
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  font-family: $font-heading;
+  line-height: inherit;
+}
+
+@mixin note-1 {
+  font-size: 13px;
+  font-weight: $font-weight-regular;
+  font-family: $font-body;
+  line-height: inherit;
+}
+
+@mixin quote {
+  font-size: 20px;
+  font-weight: $font-weight-light;
+  font-family: $font-body;
+  font-style: italic;
+  line-height: inherit;
+}
