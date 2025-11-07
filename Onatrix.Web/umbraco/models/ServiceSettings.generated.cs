@@ -61,7 +61,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// Show Label
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		[ImplementPropertyType("showServiceLabel")]
-		public virtual bool ShowServiceLabel => this.Value<bool>(_publishedValueFallback, "showServiceLabel");
+		[ImplementPropertyType("showLabel")]
+		public virtual bool ShowLabel => this.Value<bool>(_publishedValueFallback, "showLabel");
 	}
 }
