@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Contact Page</summary>
 	[PublishedModel("contactPage")]
-	public partial class ContactPage : PublishedContentModel
+	public partial class ContactPage : PublishedContentModel, IHasContactInfoSection
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,35 +50,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Contact Info Header
+		/// Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("contactInfoHeader")]
-		public virtual string ContactInfoHeader => this.Value<string>(_publishedValueFallback, "contactInfoHeader");
+		[ImplementPropertyType("contactContent")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ContactContent => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "contactContent");
 
 		///<summary>
-		/// Placeholder
+		/// Contact Info Reference: This content is filled in once under "Global Content Collection"
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("placeholder")]
-		public virtual string Placeholder => this.Value<string>(_publishedValueFallback, "placeholder");
-
-		///<summary>
-		/// Placeholder2
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("placeholder2")]
-		public virtual string Placeholder2 => this.Value<string>(_publishedValueFallback, "placeholder2");
-
-		///<summary>
-		/// Placeholder3
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("placeholder3")]
-		public virtual string Placeholder3 => this.Value<string>(_publishedValueFallback, "placeholder3");
+		[ImplementPropertyType("contactInfoReference")]
+		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent ContactInfoReference => global::Umbraco.Cms.Web.Common.PublishedModels.HasContactInfoSection.GetContactInfoReference(this, _publishedValueFallback);
 	}
 }

@@ -18,14 +18,14 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Project Detail Page</summary>
-	[PublishedModel("projectDetailPage")]
-	public partial class ProjectDetailPage : PublishedContentModel
+	/// <summary>Callback Request</summary>
+	[PublishedModel("callbackRequest")]
+	public partial class CallbackRequest : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		public new const string ModelTypeAlias = "projectDetailPage";
+		public new const string ModelTypeAlias = "callbackRequest";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
@@ -34,14 +34,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(contentTypeCache, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<ProjectDetailPage, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<CallbackRequest, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(contentTypeCache), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public ProjectDetailPage(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public CallbackRequest(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,43 +50,42 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Header
+		/// Email
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("contactHeader")]
-		public virtual string ContactHeader => this.Value<string>(_publishedValueFallback, "contactHeader");
+		[ImplementPropertyType("requestEmail")]
+		public virtual string RequestEmail => this.Value<string>(_publishedValueFallback, "requestEmail");
 
 		///<summary>
-		/// Contact Info Header
+		/// Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("contactInfoHeader")]
-		public virtual string ContactInfoHeader => this.Value<string>(_publishedValueFallback, "contactInfoHeader");
+		[ImplementPropertyType("requestName")]
+		public virtual string RequestName => this.Value<string>(_publishedValueFallback, "requestName");
 
 		///<summary>
-		/// Header
+		/// Phone Number
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("detailsHeader")]
-		public virtual string DetailsHeader => this.Value<string>(_publishedValueFallback, "detailsHeader");
+		[ImplementPropertyType("requestPhone")]
+		public virtual string RequestPhone => this.Value<string>(_publishedValueFallback, "requestPhone");
 
 		///<summary>
-		/// Placeholder
+		/// Selected Area: Area of inquiry
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("placeholder")]
-		public virtual string Placeholder => this.Value<string>(_publishedValueFallback, "placeholder");
+		[ImplementPropertyType("requestSelectedArea")]
+		public virtual string RequestSelectedArea => this.Value<string>(_publishedValueFallback, "requestSelectedArea");
 
 		///<summary>
-		/// Placeholder2
+		/// Submitted At
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("placeholder2")]
-		public virtual string Placeholder2 => this.Value<string>(_publishedValueFallback, "placeholder2");
+		[ImplementPropertyType("submittedAt")]
+		public virtual global::System.DateTime SubmittedAt => this.Value<global::System.DateTime>(_publishedValueFallback, "submittedAt");
 	}
 }

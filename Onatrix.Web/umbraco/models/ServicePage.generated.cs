@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Service Page</summary>
 	[PublishedModel("servicePage")]
-	public partial class ServicePage : PublishedContentModel
+	public partial class ServicePage : PublishedContentModel, IHasContactInfoSection
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,19 +50,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Header
+		/// Service Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("contactInfoHeader")]
-		public virtual string ContactInfoHeader => this.Value<string>(_publishedValueFallback, "contactInfoHeader");
+		[ImplementPropertyType("serviceContent")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ServiceContent => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "serviceContent");
 
 		///<summary>
-		/// Title
+		/// Contact Info Reference: This content is filled in once under "Global Content Collection"
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("serviceTitle")]
-		public virtual string ServiceTitle => this.Value<string>(_publishedValueFallback, "serviceTitle");
+		[ImplementPropertyType("contactInfoReference")]
+		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent ContactInfoReference => global::Umbraco.Cms.Web.Common.PublishedModels.HasContactInfoSection.GetContactInfoReference(this, _publishedValueFallback);
 	}
 }
