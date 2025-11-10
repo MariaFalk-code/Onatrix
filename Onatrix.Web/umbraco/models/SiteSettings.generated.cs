@@ -18,14 +18,14 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Service Details Page</summary>
-	[PublishedModel("serviceDetailsPage")]
-	public partial class ServiceDetailsPage : PublishedContentModel, IAside, IContactInfo
+	/// <summary>Site Settings</summary>
+	[PublishedModel("siteSettings")]
+	public partial class SiteSettings : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		public new const string ModelTypeAlias = "serviceDetailsPage";
+		public new const string ModelTypeAlias = "siteSettings";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
@@ -34,14 +34,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(contentTypeCache, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<ServiceDetailsPage, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<SiteSettings, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(contentTypeCache), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public ServiceDetailsPage(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public SiteSettings(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,43 +50,51 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Content
+		/// Address
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("content")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Content => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "content");
+		[ImplementPropertyType("address")]
+		public virtual string Address => this.Value<string>(_publishedValueFallback, "address");
 
 		///<summary>
-		/// About Card: This card links back to the About Us page. 
+		/// Email
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("aboutCard")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListItem<global::Umbraco.Cms.Web.Common.PublishedModels.SmallLinkingCard> AboutCard => global::Umbraco.Cms.Web.Common.PublishedModels.Aside.GetAboutCard(this, _publishedValueFallback);
+		[ImplementPropertyType("email")]
+		public virtual string Email => this.Value<string>(_publishedValueFallback, "email");
 
 		///<summary>
-		/// Contact Card
+		/// Phone
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("contactCard")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListItem<global::Umbraco.Cms.Web.Common.PublishedModels.SmallContactCard> ContactCard => global::Umbraco.Cms.Web.Common.PublishedModels.Aside.GetContactCard(this, _publishedValueFallback);
+		[ImplementPropertyType("phone")]
+		public virtual string Phone => this.Value<string>(_publishedValueFallback, "phone");
 
 		///<summary>
-		/// Image: Image must be a cutout with a transparent background to fit into the design
+		/// Site Logo
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Image => global::Umbraco.Cms.Web.Common.PublishedModels.ContactInfo.GetImage(this, _publishedValueFallback);
+		[ImplementPropertyType("siteLogo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SiteLogo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "siteLogo");
 
 		///<summary>
-		/// Title: Short, catchy title to encourage contact
+		/// Site Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("title")]
-		public virtual string Title => global::Umbraco.Cms.Web.Common.PublishedModels.ContactInfo.GetTitle(this, _publishedValueFallback);
+		[ImplementPropertyType("siteName")]
+		public virtual string SiteName => this.Value<string>(_publishedValueFallback, "siteName");
+
+		///<summary>
+		/// Social Media List
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("socialMediaList")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel SocialMediaList => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "socialMediaList");
 	}
 }
