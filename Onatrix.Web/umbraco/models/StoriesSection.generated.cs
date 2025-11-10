@@ -48,5 +48,37 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Stories Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("storiesImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops StoriesImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "storiesImage");
+
+		///<summary>
+		/// Stories Label
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("storiesLabel")]
+		public virtual string StoriesLabel => this.Value<string>(_publishedValueFallback, "storiesLabel");
+
+		///<summary>
+		/// Stories Success Numbers: Enter numbers to prominently display like number of customers, projects etc.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("storiesSuccessNumbers")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel StoriesSuccessNumbers => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "storiesSuccessNumbers");
+
+		///<summary>
+		/// Stories Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("storiesTitle")]
+		public virtual string StoriesTitle => this.Value<string>(_publishedValueFallback, "storiesTitle");
 	}
 }
