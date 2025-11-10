@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Service Details Page</summary>
 	[PublishedModel("serviceDetailsPage")]
-	public partial class ServiceDetailsPage : PublishedContentModel, IAside, IContactInfo
+	public partial class ServiceDetailsPage : PublishedContentModel, IHasAsideSection, IHasContactInfoSection
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -58,35 +58,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Content => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "content");
 
 		///<summary>
-		/// About Card: This card links back to the About Us page. 
+		/// Aside Reference: This content is filled in once under "Global Content Collection"
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("aboutCard")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListItem<global::Umbraco.Cms.Web.Common.PublishedModels.SmallLinkingCard> AboutCard => global::Umbraco.Cms.Web.Common.PublishedModels.Aside.GetAboutCard(this, _publishedValueFallback);
+		[ImplementPropertyType("asideReference")]
+		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent AsideReference => global::Umbraco.Cms.Web.Common.PublishedModels.HasAsideSection.GetAsideReference(this, _publishedValueFallback);
 
 		///<summary>
-		/// Contact Card
+		/// Contact Info Reference: This content is filled in once under "Global Content Collection"
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("contactCard")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListItem<global::Umbraco.Cms.Web.Common.PublishedModels.SmallContactCard> ContactCard => global::Umbraco.Cms.Web.Common.PublishedModels.Aside.GetContactCard(this, _publishedValueFallback);
-
-		///<summary>
-		/// Image: Image must be a cutout with a transparent background to fit into the design
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Image => global::Umbraco.Cms.Web.Common.PublishedModels.ContactInfo.GetImage(this, _publishedValueFallback);
-
-		///<summary>
-		/// Title: Short, catchy title to encourage contact
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("title")]
-		public virtual string Title => global::Umbraco.Cms.Web.Common.PublishedModels.ContactInfo.GetTitle(this, _publishedValueFallback);
+		[ImplementPropertyType("contactInfoReference")]
+		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent ContactInfoReference => global::Umbraco.Cms.Web.Common.PublishedModels.HasContactInfoSection.GetContactInfoReference(this, _publishedValueFallback);
 	}
 }

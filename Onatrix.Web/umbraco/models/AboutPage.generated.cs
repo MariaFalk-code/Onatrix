@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>About Page</summary>
 	[PublishedModel("aboutPage")]
-	public partial class AboutPage : PublishedContentModel
+	public partial class AboutPage : PublishedContentModel, IHasContactInfoSection
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -56,5 +56,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("aboutContent")]
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel AboutContent => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "aboutContent");
+
+		///<summary>
+		/// Contact Info Reference: This content is filled in once under "Global Content Collection"
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("contactInfoReference")]
+		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent ContactInfoReference => global::Umbraco.Cms.Web.Common.PublishedModels.HasContactInfoSection.GetContactInfoReference(this, _publishedValueFallback);
 	}
 }
