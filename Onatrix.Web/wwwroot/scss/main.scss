@@ -1,5 +1,9 @@
-﻿@use 'base' as *;
-@use 'layout' as *;
-@use 'abstracts' as *;
+﻿@use 'abstracts' as *;
+@use 'base' as *;
 @use 'components' as *;
+@use 'layout' as *;
 @use 'pages' as *;
+
+@use 'fontawesome/fontawesome' as fa;
+@use 'fontawesome/brands' as fa-brands;
+@use 'fontawesome/solid' as fa-solid;
