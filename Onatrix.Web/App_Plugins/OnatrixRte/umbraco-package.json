@@ -1,0 +1,71 @@
+{
+  "name": "Onatrix Rte",
+  "alias": "Onatrix.Rte",
+  "extensions": [
+    {
+      "type": "tiptapToolbarExtension",
+      "kind": "styleMenu",
+      "alias": "Onatrix.Tiptap.StyleMenu",
+      "name": "Onatrix Tiptap Style Menu",
+      "meta": {
+        "alias": "myCustomStyleMenu",
+        "icon": "icon-palette",
+        "label": "Onatrix Styles"
+      },
+      "items": [
+        {
+          "label": "Headings",
+          "items": [
+            {
+              "label": "Heading 3",
+              "data": {
+                "tag": "h3",
+                "class": "@include heading-3"
+              },
+              "appearance": { "icon": "icon-heading-3" }
+            },
+            {
+              "label": "Heading 4",
+              "data": {
+                "tag": "h4",
+                "class": "@include heading-4"
+              },
+              "appearance": { "icon": "icon-heading-4" }
+            },
+            {
+              "label": "Heading 5",
+              "data": {
+                "tag": "h5",
+                "class": "@include heading-5"
+              },
+              "appearance": { "icon": "icon-heading-5" }
+            }
+          ]
+        },
+        {
+          "label": "Colors",
+          "items": [
+            {
+              "label": "Primary",
+              "data": {
+                "class": ""
+              }
+            },
+            {
+              "label": "IDs",
+              "data": { "id": "bar" }
+            },
+            {
+              "label": "Mixed",
+              "data": {
+                "tag": "span",
+                "class": "foo",
+                "id": "bar"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
