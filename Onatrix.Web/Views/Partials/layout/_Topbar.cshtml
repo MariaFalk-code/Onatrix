@@ -1,0 +1,49 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+  var rootContent = Umbraco.ContentAtRoot();
+  var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+  var address = siteSettings?.Address ?? "";
+}
+
+<section>
+  <div>
+    <p>@address</p>
+
+    @if (siteSettings?.SocialMediaList != null && siteSettings.SocialMediaList.Any())
+    {
+      <ul>
+        @foreach (var platform in siteSettings.SocialMediaList)
+        {
+          if (platform.Content is SocialMediaItem socialMediaItem)
+          {
+            var iconClass = socialMediaItem.PlatformName?.ToLower() switch
+            {
+              "facebook" => "fab fa-facebook-f",
+              "x" => "fab fa-x-twitter",
+              "linkedin" => "fab fa-linkedin-in",
+              "tiktok" => "fab fa-tiktok",
+              "instagram" => "fab fa-instagram",
+              _ => null
+            };
+
+            if (iconClass != null)
+            {
+              <li>
+                <a href="@socialMediaItem.PlatformAccountUrl" target="_blank">
+                  <i class="@iconClass"></i>
+                </a>
+              </li>
+            }
+            else
+            {
+              <li>Unsupported Platform: @socialMediaItem.PlatformName</li>
+            }
+          }
+        }
+      </ul>
+    }
+  </div>
+</section>
