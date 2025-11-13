@@ -24,25 +24,25 @@
   font-size: 30px;
   font-weight: $font-weight-bold;
   font-family: $font-heading;
-  line-height: inherit;
+  line-height: 1.25;
 }
 @mixin heading-4 {
   font-size: 25px;
   font-weight: $font-weight-bold;
   font-family: $font-heading;
-  line-height: inherit;
+  line-height: 1.25;
 }
 @mixin heading-5 {
   font-size: 22px;
   font-weight: $font-weight-semibold;
   font-family: $font-heading;
-  line-height: inherit;
+  line-height: 1.5;
 }
 @mixin heading-6 {
   font-size: 18px;
   font-weight: $font-weight-bold;
   font-family: $font-heading;
-  line-height: inherit;
+  line-height: 1.5;
 }
 
 @mixin note-1 {
@@ -58,4 +58,32 @@
   font-family: $font-body;
   font-style: italic;
   line-height: inherit;
+}
+
+@mixin rte-heading-l {
+  font-size: 25px;
+  font-weight: $font-weight-bold;
+  font-family: $font-heading;
+  line-height: 1.25;
+}
+
+@mixin rte-heading-m {
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  font-family: $font-heading;
+  line-height: 1.25;
+}
+
+@mixin rte-heading-s {
+  font-size: 18px;
+  font-weight: $font-weight-semibold;
+  font-family: $font-heading;
+  line-height: 1.5;
+}
+
+@mixin rte-body {
+  font-size: 14px;
+  font-weight: $font-weight-regular;
+  font-family: $font-body;
+  line-height: 1.6;
 }

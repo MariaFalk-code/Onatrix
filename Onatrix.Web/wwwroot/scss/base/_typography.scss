@@ -1,5 +1,50 @@
 ﻿@use '../abstracts' as *;
 
+//STYLES
 .heading-1 {
   @include heading-1;
+}
+.heading-2 {
+  @include heading-2;
+}
+.heading-3 {
+  @include heading-3;
+}
+.heading-4 {
+  @include heading-4;
+}
+.heading-5 {
+  @include heading-5;
+}
+.heading-6 {
+  @include heading-6;
+}
+.rte-heading-l {
+  @include rte-heading-l;
+}
+.rte-heading-m {
+  @include rte-heading-m;
+}
+.rte-heading-s {
+  @include rte-heading-s;
+}
+.rte-body {
+  @include rte-body;
+}
+
+//COLORS
+.color-main {
+  color: $color-main;
+}
+.color-complement-1 {
+  color: $color-complement-1;
+}
+.color-complement-3 {
+  color: $color-complement-3;
+}
+.color-body-text {
+  color: $color-body-text;
+}
+.color-body-light {
+  color: $color-body-light;
 }

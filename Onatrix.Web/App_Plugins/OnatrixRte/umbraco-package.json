@@ -6,64 +6,89 @@
       "type": "tiptapToolbarExtension",
       "kind": "styleMenu",
       "alias": "Onatrix.Tiptap.StyleMenu",
-      "name": "Onatrix Tiptap Style Menu",
+      "name": "Onatrix Style Menu",
       "meta": {
-        "alias": "myCustomStyleMenu",
-        "icon": "icon-palette",
+        "alias": "onatrixStyleMenu",
         "label": "Onatrix Styles"
       },
+
       "items": [
         {
-          "label": "Headings",
-          "items": [
-            {
-              "label": "Heading 3",
-              "data": {
-                "tag": "h3",
-                "class": "@include heading-3"
-              },
-              "appearance": { "icon": "icon-heading-3" }
-            },
-            {
-              "label": "Heading 4",
-              "data": {
-                "tag": "h4",
-                "class": "@include heading-4"
-              },
-              "appearance": { "icon": "icon-heading-4" }
-            },
-            {
-              "label": "Heading 5",
-              "data": {
-                "tag": "h5",
-                "class": "@include heading-5"
-              },
-              "appearance": { "icon": "icon-heading-5" }
-            }
-          ]
+          "label": "Large Heading",
+          "data": {
+            "tag": "p",
+            "class": "rte-heading-l"
+          }
         },
         {
-          "label": "Colors",
-          "items": [
-            {
-              "label": "Primary",
-              "data": {
-                "class": ""
-              }
-            },
-            {
-              "label": "IDs",
-              "data": { "id": "bar" }
-            },
-            {
-              "label": "Mixed",
-              "data": {
-                "tag": "span",
-                "class": "foo",
-                "id": "bar"
-              }
-            }
-          ]
+          "label": "Medium Heading",
+          "data": {
+            "tag": "p",
+            "class": "rte-heading-m"
+          }
+        },
+        {
+          "label": "Small Heading",
+          "data": {
+            "tag": "p",
+            "class": "rte-heading-s"
+          }
+        },
+        {
+          "label": "Body Text",
+          "data": {
+            "tag": "p",
+            "class": "rte-body"
+          }
+        }
+      ]
+    },
+
+    {
+      "type": "tiptapToolbarExtension",
+      "kind": "styleMenu",
+      "alias": "Onatrix.Tiptap.BrandColors",
+      "name": "Onatrix Brand Colors",
+      "meta": {
+        "alias": "onatrixBrandColors",
+        "label": "Onatrix Colors"
+      },
+
+      "items": [
+        {
+          "label": "Primary - Headings",
+          "data": {
+            "tag": "span",
+            "class": "color-main"
+          }
+        },
+        {
+          "label": "Main Body Text",
+          "data": {
+            "tag": "span",
+            "class": "color-body-text"
+          }
+        },
+        {
+          "label": "Light Body Text",
+          "data": {
+            "tag": "span",
+            "class": "color-body-light"
+          }
+        },
+        {
+          "label": "Complement 1",
+          "data": {
+            "tag": "span",
+            "class": "color-complement-1"
+          }
+        },
+        {
+          "label": "Complement 3",
+          "data": {
+            "tag": "span",
+            "class": "color-complement-3"
+          }
         }
       ]
     }
