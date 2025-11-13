@@ -4,8 +4,20 @@
   var content = (ContentModels.HeroSection)Model.Content;
 }
 
-<h1>@content.HeroTitle</h1>
-<p>@content.HeroBody</p>
-<a href="@content.HeroLink" class="btn"></a>
 
-<img src="@content.HeroBgImage?.Url()" alt="Hero background" />
+<section class="hero-section">
+  <div class="hero-bg">
+    <img src="@content.HeroBgImage?.Url()" alt="Hero background" />
+  </div>
+  <div class="container section">
+    <div class="hero-content">
+      <h1>@content.HeroTitle</h1>
+      <p>@content.HeroBody</p>
+
+      @if (content.HeroLink != null)
+      {
+        <a href="@content.HeroLink.Url" class="button-small">@content.HeroLink.Name</a>
+      }
+    </div>
+  </div> 
+</section>
