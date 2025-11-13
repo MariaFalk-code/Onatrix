@@ -1,5 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
+  var content = (ContentModels.ServiceSection)Model.Content;
+  var settings = Model.Settings as ContentModels.ServiceSettings; // Cast Model.Settings safely using 'as' to avoid null reference exceptions
 }

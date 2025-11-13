@@ -1,10 +1,12 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+﻿@using Umbraco.Cms.Core.Models.Blocks
+@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomePage>
 @{
 	Layout = "mainLayout.cshtml";
 }
 
-<main>
 	<h1>TESTING</h1>
 	<i class="fa-solid fa-envelope"></i>
-</main>
+
+@Html.GetBlockListHtml(Model.HomeContent)
+
