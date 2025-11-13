@@ -68,8 +68,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// Show Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("showTitle")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> ShowTitle => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "showTitle");
+		public virtual bool ShowTitle => this.Value<bool>(_publishedValueFallback, "showTitle");
 	}
 }

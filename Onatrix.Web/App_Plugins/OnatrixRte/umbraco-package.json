@@ -1,0 +1,96 @@
+{
+  "name": "Onatrix Rte",
+  "alias": "Onatrix.Rte",
+  "extensions": [
+    {
+      "type": "tiptapToolbarExtension",
+      "kind": "styleMenu",
+      "alias": "Onatrix.Tiptap.StyleMenu",
+      "name": "Onatrix Style Menu",
+      "meta": {
+        "alias": "onatrixStyleMenu",
+        "label": "Onatrix Styles"
+      },
+
+      "items": [
+        {
+          "label": "Large Heading",
+          "data": {
+            "tag": "p",
+            "class": "rte-heading-l"
+          }
+        },
+        {
+          "label": "Medium Heading",
+          "data": {
+            "tag": "p",
+            "class": "rte-heading-m"
+          }
+        },
+        {
+          "label": "Small Heading",
+          "data": {
+            "tag": "p",
+            "class": "rte-heading-s"
+          }
+        },
+        {
+          "label": "Body Text",
+          "data": {
+            "tag": "p",
+            "class": "rte-body"
+          }
+        }
+      ]
+    },
+
+    {
+      "type": "tiptapToolbarExtension",
+      "kind": "styleMenu",
+      "alias": "Onatrix.Tiptap.BrandColors",
+      "name": "Onatrix Brand Colors",
+      "meta": {
+        "alias": "onatrixBrandColors",
+        "label": "Onatrix Colors"
+      },
+
+      "items": [
+        {
+          "label": "Primary - Headings",
+          "data": {
+            "tag": "span",
+            "class": "color-main"
+          }
+        },
+        {
+          "label": "Main Body Text",
+          "data": {
+            "tag": "span",
+            "class": "color-body-text"
+          }
+        },
+        {
+          "label": "Light Body Text",
+          "data": {
+            "tag": "span",
+            "class": "color-body-light"
+          }
+        },
+        {
+          "label": "Complement 1",
+          "data": {
+            "tag": "span",
+            "class": "color-complement-1"
+          }
+        },
+        {
+          "label": "Complement 3",
+          "data": {
+            "tag": "span",
+            "class": "color-complement-3"
+          }
+        }
+      ]
+    }
+  ]
+}

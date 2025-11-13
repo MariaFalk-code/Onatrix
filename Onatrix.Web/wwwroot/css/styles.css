@@ -1,3 +1,7 @@
+.button {
+  border-radius: 4px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -85,8 +89,94 @@ html {
   scroll-behavior: smooth;
 }
 
-.button {
-  border-radius: 4px;
+.heading-1 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.25;
+}
+
+.heading-3 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.25;
+}
+
+.heading-4 {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.25;
+}
+
+.heading-5 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+.heading-6 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+.rte-heading-l {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.25;
+}
+
+.rte-heading-m {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.25;
+}
+
+.rte-heading-s {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+.rte-body {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+.color-main {
+  color: #4F5955;
+}
+
+.color-complement-1 {
+  color: #F2EDDC;
+}
+
+.color-complement-3 {
+  color: #D9C3A9;
+}
+
+.color-body-text {
+  color: #535656;
+}
+
+.color-body-light {
+  color: #9C9EA6;
 }
 
 /*# sourceMappingURL=styles.css.map */
