@@ -11,6 +11,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-heading;
   text-wrap: balance;
+  color: $color-main;
+  padding-bottom: 1rem;
 }
 
 a {
@@ -29,6 +31,7 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:focus-visible {
@@ -40,11 +43,4 @@ input, textarea, select, button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: $color-bg-dark;
-    color: $color-text-dark;
-  }
 }
