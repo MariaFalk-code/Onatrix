@@ -54,8 +54,8 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("content")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Content => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "content");
+		[ImplementPropertyType("serviceDetailContent")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ServiceDetailContent => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "serviceDetailContent");
 
 		///<summary>
 		/// Aside Reference: This content is filled in once under "Global Content Collection"

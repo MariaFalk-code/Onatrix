@@ -1,5 +1,11 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
+  var content = (ContentModels.HeroSection)Model.Content;
 }
+
+<h1>@content.HeroTitle</h1>
+<p>@content.HeroBody</p>
+<a href="@content.HeroLink" class="btn"></a>
+
+<img src="@content.HeroBgImage?.Url()" alt="Hero background" />
