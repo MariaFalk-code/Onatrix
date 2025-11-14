@@ -102,14 +102,14 @@
   align-items: center;
 }
 
-@mixin flex-vertical-center {
+@mixin flex-column-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-@mixin flex-vertical-left {
+@mixin flex-column-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

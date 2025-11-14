@@ -37,6 +37,6 @@
     background-color: $color-complement-3;
   }
   &:focus {
-    outline: 2px solid lighten($color-complement-3, 20%);
+    outline: 2px solid lighten($color-complement-1, 20%);
   }
 }
