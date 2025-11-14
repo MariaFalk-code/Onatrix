@@ -80,6 +80,13 @@
   padding-bottom: 1rem;
 }
 
+.service-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -103,7 +110,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   text-wrap: balance;
-  color: #4F5955;
   padding-bottom: 1rem;
 }
 
@@ -176,6 +182,54 @@ html {
   scroll-behavior: smooth;
 }
 
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+  color: #4F5955;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.25;
+  color: #4F5955;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.25;
+  color: #4F5955;
+}
+
+h4 {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.25;
+  color: #4F5955;
+}
+
+h5 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  color: #4F5955;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  color: #4F5955;
+}
+
 .rte-heading-l {
   font-size: 25px;
   font-weight: 700;
@@ -222,6 +276,12 @@ html {
 
 .color-body-light {
   color: #9C9EA6;
+}
+
+.label {
+  color: #D9C3A9;
+  font-size: 0, 875rem;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=styles.css.map */

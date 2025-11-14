@@ -1,6 +1,31 @@
 ﻿@use '../abstracts' as *;
 
 //STYLES
+h1 {
+  @include heading-1;
+  color: $color-main;
+}
+h2 {
+  @include heading-2;
+  color: $color-main;
+}
+h3 {
+  @include heading-3;
+  color: $color-main;
+}
+h4 {
+  @include heading-4;
+  color: $color-main;
+}
+h5 {
+  @include heading-5;
+  color: $color-main;
+}
+h6 {
+  @include heading-6;
+  color: $color-main;
+}
+
 .rte-heading-l {
   @include rte-heading-l;
 }
@@ -29,4 +54,10 @@
 }
 .color-body-light {
   color: $color-body-light;
+}
+
+.label {
+  color: $color-complement-3;
+  font-size: 0,875rem;
+  font-weight: 700;
 }

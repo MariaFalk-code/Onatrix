@@ -1,0 +1,24 @@
+﻿@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ServiceDetailSection>
+
+@{
+  var title = Model.ServiceDetailTitle;
+  var thumbnail = Model.ServiceDetailThumbnail;
+  var excerpt = Model.ServiceDetailExcerpt;
+}
+
+<div class="card">
+  <h5>@title</h5>
+
+  @if (@thumbnail != null) 
+  {
+    <img src="@thumbnail?.Url()" alt="title" />
+  }
+  else
+  {
+    <img src="/images/header-img-original.png" alt="Globe" />
+  }
+
+  <p>@excerpt</p>
+</div>
+
