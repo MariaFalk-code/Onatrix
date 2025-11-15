@@ -10,32 +10,36 @@
   var showBody = settings?.ShowBody == true;
 }
 
-<section class="contact-form">
-  <div class="contact-form-wrapper">
-    @if (showLabel) {
-      <span class="label">@content.FormLabel</span>
-    }
-    @if (showTitle) {
-      <h2>@content.FormTitle</h2>
-    }
-    @if (showBody) {
-      <p>@content.FormBody</p>
-    }
 
-    <form class="contact-form-form" method="post">
-      <div class="contact-form-row">
-        <input type="text" placeholder="First name" disabled />
-        <input type="text" placeholder="Last name" disabled />
-      </div>
-      <input type="email" placeholder="Email address" disabled />
-      <input type="text" placeholder="Phone" disabled />
-      <select disabled>
+<div class="contact-form__wrapper">
+  @if (showLabel) {
+    <span class="label">@content.FormLabel</span>
+  }
+  @if (showTitle) {
+    <h3>@content.FormTitle</h3>
+  }
+  @if (showBody) {
+    <p>@content.FormBody</p>
+  }
+
+  <form class="contact-form__form" method="post">
+    <div class="contact-form__row">
+      <input type="text" class="contact-form__input" placeholder="First name" disabled />
+      <input type="text" class="contact-form__input" placeholder="Last name" disabled />
+    </div>
+    <div class="contact-form__row">
+      <input type="email" class="contact-form__input" placeholder="Email address" disabled />
+      <input type="text" class="contact-form__input" placeholder="Phone" disabled />
+    </div>
+    <div class="contact-form__row">
+      <select class="contact-form__select" disabled>
         <option disabled selected>Choose area of inquiry</option>
         <option>Financial consulting</option>
         <option>Legal services</option>
         <option>Other</option>
       </select>
-      <button type="submit" disabled>Submit</button>
-    </form>
-  </div>
-</section>
+    </div>
+    <button type="submit" disabled>Submit</button>
+  </form>
+</div>
+

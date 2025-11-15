@@ -24,7 +24,7 @@
       @*Service Cards loop out here. The content for each card is extracted from the serviceDetailSection of each ServiceDetailsPage.
          Max six cards is rendered on the homepage, otherwise all available cards will be rendered.*@
 
-       <div class="service-card-grid">
+       <div class="service-card__grid">
         @if (content.ServiceCollection != null && content.ServiceCollection.Any())
         {
           var cardsToRender = isHomePage

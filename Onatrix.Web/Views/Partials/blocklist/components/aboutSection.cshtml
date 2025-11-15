@@ -12,7 +12,7 @@
   var showSignature = settings?.ShowSignature == true;
 }
 
-<section class="@(isHomePage ? "layout-home" : "layout-about")">
+<section class="@(isHomePage ? "layout--home" : "layout--about")">
   <div class="container section">
     <div class="about-content">
 
@@ -35,14 +35,15 @@
 
         if (formBlock != null)
         {
-          <div class="about-form">
+          <section class="contact-form--about">
             @await Html.PartialAsync("BlockList/Components/ContactForm", formBlock)
-          </div>
+          </section>
         }
       }
       else {
-        <img src="@content.AboutImage?.Url()" alt="About image" />
-        <span>@content.AboutCaption</span>
+        <div class="about-image">
+          <img src="@content.AboutImage?.Url()" alt="Image of CEO Tina Fox" />
+        </div>
       }
     </div>
   </div>

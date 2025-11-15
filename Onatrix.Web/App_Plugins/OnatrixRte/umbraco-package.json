@@ -17,21 +17,21 @@
           "label": "Large Heading",
           "data": {
             "tag": "p",
-            "class": "rte-heading-l"
+            "class": "rte-heading--l"
           }
         },
         {
           "label": "Medium Heading",
           "data": {
             "tag": "p",
-            "class": "rte-heading-m"
+            "class": "rte-heading--m"
           }
         },
         {
           "label": "Small Heading",
           "data": {
             "tag": "p",
-            "class": "rte-heading-s"
+            "class": "rte-heading--s"
           }
         },
         {
@@ -66,14 +66,14 @@
           "label": "Main Body Text",
           "data": {
             "tag": "span",
-            "class": "color-body-text"
+            "class": "color-body--text"
           }
         },
         {
           "label": "Light Body Text",
           "data": {
             "tag": "span",
-            "class": "color-body-light"
+            "class": "color-body--light"
           }
         },
         {

@@ -26,14 +26,18 @@ h6 {
   color: $color-main;
 }
 
-.rte-heading-l {
-  @include rte-heading-l;
-}
-.rte-heading-m {
-  @include rte-heading-m;
-}
-.rte-heading-s {
-  @include rte-heading-s;
+.rte-heading {
+  &--l {
+    @include rte-heading-l;
+  }
+
+  &--m {
+    @include rte-heading-m;
+  }
+
+  &--s {
+    @include rte-heading-s;
+  }
 }
 .rte-body {
   @include rte-body;
@@ -49,10 +53,10 @@ h6 {
 .color-complement-3 {
   color: $color-complement-3;
 }
-.color-body-text {
+.color-body--text {
   color: $color-body-text;
 }
-.color-body-light {
+.color-body--light {
   color: $color-body-light;
 }
 
