@@ -10,8 +10,10 @@
   var showBody = settings?.ShowBody == true;
 }
 
+@* When this contactform is rendered, it is contained on the page in a section-tag with a class specific to the section where it is rendered.
+   This page/section-specific class is styled in the scss-file of the section in question. *@
 
-<div class="contact-form__wrapper">
+<div class="contact-form__content-wrapper">
   @if (showLabel) {
     <span class="label">@content.FormLabel</span>
   }

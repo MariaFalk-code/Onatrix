@@ -3,7 +3,7 @@
 
 .contact-form {
   //Shared styles
-  &__wrapper {
+  &__content-wrapper {
 
     p {
       @include note-1;
@@ -12,6 +12,8 @@
   }
 
   &__input {
+    flex: 1 1 auto;
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid $color-border;
     border-radius: 3px;
@@ -26,8 +28,9 @@
   }
 
   &__select {
-    padding-block: 0.5rem;
-    padding-inline: 1.2rem;
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 0.5rem;
     border: 1px solid $color-border;
     border-radius: 3px;
     background-color: $color-bg;
@@ -36,15 +39,27 @@
 
   &--about {
     h3 {
-      color: $color-complement-1
+      color: $color-complement-1;
+      padding: 2rem;
+      width: 100%;
+      background-color: $color-main;
+    }
+
+    p {
+      padding-top: 1rem;
+      padding-inline: 2rem;
     }
 
     .contact-form__form {
       @include flex-column-center;
+      width: 100%;
       gap: 1rem;
+      padding-inline: 2rem;
+    
 
       .contact-form__row {
         @include flex-column-center;
+        width: 100%;
         gap: 1rem;
       }
 

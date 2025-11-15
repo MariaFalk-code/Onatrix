@@ -14,7 +14,7 @@
 
 <section class="@(isHomePage ? "layout--home" : "layout--about")">
   <div class="container section">
-    <div class="about-content">
+    <div class="about-content--block-1">
 
       @if (showLabel) {
         <span class="label">@content.AboutLabel</span>
@@ -29,7 +29,8 @@
         <img src="@content.SignatureImage?.Url()" alt="CEO signature"/>
         <span>@content.SignatureCaption</span>
       }
-
+    </div>
+    <div class="about-content--block-2">
       @if (showForm) {
         var formBlock = content.CallbackForm?.FirstOrDefault();
 

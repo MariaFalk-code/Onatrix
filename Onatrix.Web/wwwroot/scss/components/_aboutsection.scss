@@ -1,1 +1,23 @@
 ﻿@use '../abstracts' as *;
+
+.layout--about {
+
+}
+
+layout--home {
+
+}
+
+about-content--block-1 {
+}
+
+about-content--block-1 {
+}
+
+.contact-form--about {
+  @include box-shadow-soft;
+  border-radius: 3px;
+  background-color: $color-bg;
+  max-width: 28rem;
+  padding-bottom: 2rem;
+}
