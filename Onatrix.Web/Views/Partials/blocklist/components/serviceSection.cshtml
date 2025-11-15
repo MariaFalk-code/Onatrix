@@ -6,6 +6,7 @@
   var content = (ContentModels.ServiceSection)Model.Content;
   var settings = Model.Settings as ContentModels.ServiceSettings;
   var sectionColor = settings?.ServiceBgColor?.Color ?? "$color-bg";
+  var showLabel = settings?.ShowLabel == true;
 
   var currentPage = Umbraco.AssignedContentItem;
   var isHomePage = currentPage.ContentType.Alias == "homePage";
@@ -15,15 +16,15 @@
   <div class="container section">
     <div class="service-content">
 
-      @if (settings?.ShowLabel == true) {
+      @if (showLabel) {
         <span class="label">@content.ServiceLabel</span>
       }
       <h2>@content.ServiceTitle</h2>
 
-      @* Service Cards loop out here. The content for each card is extracted from the serviceDetailSection of each ServiceDetailsPage.
+      @*Service Cards loop out here. The content for each card is extracted from the serviceDetailSection of each ServiceDetailsPage.
          Max six cards is rendered on the homepage, otherwise all available cards will be rendered.*@
 
-      <div class="service-card-grid">
+       <div class="service-card-grid">
         @if (content.ServiceCollection != null && content.ServiceCollection.Any())
         {
           var cardsToRender = isHomePage
