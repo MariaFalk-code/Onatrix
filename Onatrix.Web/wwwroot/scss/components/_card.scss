@@ -1,8 +1,10 @@
 ﻿@use '../abstracts' as *;
 
 .card {
-  @include flex-column-center;
-  max-width: 370px;
+  @include flex-column-left;
+  text-align: left;
+  width: 370px;
+  height: 400px;
   display: inline-block;
   padding-block: 1rem;
   border-radius: 0.25rem;
@@ -17,7 +19,24 @@
   }
 
   h5 {
-    justify-self: flex-start;
-    padding-left: 1rem;
+    padding-inline: 1rem;
+  }
+
+  p {
+    overflow: hidden;
+    padding-inline : 1rem;
   }
 }
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover .card {
+    transform: translateX(-2px);
+    transition: 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+

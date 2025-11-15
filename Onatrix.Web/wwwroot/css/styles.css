@@ -43,9 +43,11 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 370px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  width: 370px;
+  height: 400px;
   display: inline-block;
   padding-block: 1rem;
   border-radius: 0.25rem;
@@ -59,8 +61,22 @@
   margin-bottom: 1rem;
 }
 .card h5 {
-  justify-self: flex-start;
-  padding-left: 1rem;
+  padding-inline: 1rem;
+}
+.card p {
+  overflow: hidden;
+  padding-inline: 1rem;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.card-link:hover .card {
+  transform: translateX(-2px);
+  transition: 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .hero-section {
@@ -108,6 +124,25 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.service-card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, auto);
+}
+@media (min-width: 820px) {
+  .service-card-grid {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (min-width: 1200px) {
+  .service-card-grid {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+.service-card-grid {
+  justify-content: center;
 }
 
 .container {
