@@ -22,8 +22,8 @@
       @if (showTitle) {
       <h2>@content.AboutTitle</h2>
       }
-    
-      <p>@content.AboutBody</p>
+      <p class="about-quote">@content.AboutQuote</p>
+      <p> @content.AboutBody</p>
 
       @if (showSignature){
         <img src="@content.SignatureImage?.Url()" alt="CEO signature"/>
@@ -44,6 +44,7 @@
       else {
         <div class="about-image">
           <img src="@content.AboutImage?.Url()" alt="Image of CEO Tina Fox" />
+          <span>@content.AboutCaption</span>
         </div>
       }
     </div>

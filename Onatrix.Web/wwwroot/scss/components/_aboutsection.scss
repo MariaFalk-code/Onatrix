@@ -1,23 +1,78 @@
 ﻿@use '../abstracts' as *;
 
 .layout--about {
+  .container {
+    @include flex-center;
+    flex-direction: row-reverse;
+  }
 
+  .about-content--block-1 {
+    max-width: 60%;
+    padding-left: 3rem;
+  }
+
+  span {
+    font-style: italic;
+  }
+
+  .about-image {
+     img {
+       padding-bottom: 0.75rem;
+     }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 }
 
-layout--home {
+.layout--home {
+  .container {
+    @include flex-center;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .section {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .about-image {
+    margin-left: 1rem;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 }
 
-about-content--block-1 {
-}
+  .about-content--block-1 {
+    p {
+      padding-bottom: 0.75rem;
+    }
+  }
 
-about-content--block-1 {
-}
+  .contact-form--about {
+    @include box-shadow-soft;
+    border-radius: 3px;
+    background-color: $color-bg;
+    width: clamp(20rem, 90vw, 28rem);
+    padding-bottom: 2rem;
+    margin-left: 1rem;
+    transform: translateY(-4rem);
+    position: relative;
+    z-index: 1;
 
-.contact-form--about {
-  @include box-shadow-soft;
-  border-radius: 3px;
-  background-color: $color-bg;
-  max-width: 28rem;
-  padding-bottom: 2rem;
-}
+    @media (max-width: 768px) {
+      transform: none;
+      margin-top: 2rem;
+    }
+  }
+
+  .about-quote {
+    @include quote;
+    font-weight: 300;
+    padding-top: 1rem;
+  }
