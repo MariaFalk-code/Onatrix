@@ -1,14 +1,43 @@
 ﻿@use '../abstracts' as *;
 
 //STYLES
-.rte-heading-l {
-  @include rte-heading-l;
+h1 {
+  @include heading-1;
+  color: $color-main;
 }
-.rte-heading-m {
-  @include rte-heading-m;
+h2 {
+  @include heading-2;
+  color: $color-main;
 }
-.rte-heading-s {
-  @include rte-heading-s;
+h3 {
+  @include heading-3;
+  color: $color-main;
+}
+h4 {
+  @include heading-4;
+  color: $color-main;
+}
+h5 {
+  @include heading-5;
+  color: $color-main;
+}
+h6 {
+  @include heading-6;
+  color: $color-main;
+}
+
+.rte-heading {
+  &--l {
+    @include rte-heading-l;
+  }
+
+  &--m {
+    @include rte-heading-m;
+  }
+
+  &--s {
+    @include rte-heading-s;
+  }
 }
 .rte-body {
   @include rte-body;
@@ -24,9 +53,15 @@
 .color-complement-3 {
   color: $color-complement-3;
 }
-.color-body-text {
+.color-body--text {
   color: $color-body-text;
 }
-.color-body-light {
+.color-body--light {
   color: $color-body-light;
+}
+
+.label {
+  color: $color-complement-3;
+  font-size: 0,875rem;
+  font-weight: 700;
 }

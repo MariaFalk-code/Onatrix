@@ -1,0 +1,30 @@
+﻿@model Onatrix.Web.Models.ViewModels.ServiceCardViewModel
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+  var detail = Model.Detail;
+  var title = detail.ServiceDetailTitle;
+  var thumbnail = detail.ServiceDetailThumbnail;
+  var excerpt = detail.ServiceDetailExcerpt;
+  var link = Model.LinkUrl;
+}
+
+<a href="@link" class="card-link">
+
+  <div class="card">
+    <h5>@title</h5>
+
+    @if (@thumbnail != null) 
+    {
+      <img src="@thumbnail?.Url()" alt="title" />
+    }
+    else
+    {
+      <img src="/images/header-img-original.png" alt="Globe" />
+    }
+
+    <p>@excerpt</p>
+  </div>
+
+</a>
+

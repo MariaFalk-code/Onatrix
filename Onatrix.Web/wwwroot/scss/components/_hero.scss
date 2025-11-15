@@ -21,7 +21,7 @@
 }
 
 .hero-content {
-  @include flex-vertical-left;
+  @include flex-column-left;
   position: relative;
   z-index: 1;
   max-width: 55%;
@@ -36,5 +36,4 @@
     color: $color-main;
     padding-bottom: 1rem;
   }
-
 }

@@ -1,0 +1,85 @@
+﻿@use '../abstracts' as *;
+@use 'buttons' as *;
+
+.contact-form {
+  //Shared styles
+  &__content-wrapper {
+
+    p {
+      @include note-1;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__input {
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $color-border;
+    border-radius: 3px;
+    background-color: $color-bg;
+    font-size: 1rem;
+
+    &::placeholder {
+      @include note-1;
+      color: $color-body-light;
+      opacity: 0.7;
+    }
+  }
+
+  &__select {
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $color-border;
+    border-radius: 3px;
+    background-color: $color-bg;
+  }
+  //page-specific styles
+
+  &--about {
+    h3 {
+      color: $color-complement-1;
+      padding: 2rem;
+      width: 100%;
+      background-color: $color-main;
+    }
+
+    p {
+      padding-top: 1rem;
+      padding-inline: 2rem;
+    }
+
+    .contact-form__form {
+      @include flex-column-center;
+      width: 100%;
+      gap: 1rem;
+      padding-inline: 2rem;
+    
+
+      .contact-form__row {
+        @include flex-column-center;
+        width: 100%;
+        gap: 1rem;
+      }
+
+      button {
+        @include button-large;
+      }
+    }
+  }
+
+  &--detailpage {
+    .contact-form__form {
+      flex-direction: column;
+
+      .contact-form__row {
+        flex-direction: row;
+      }
+
+      button {
+        @include button-small;
+      }
+    }
+  }
+}

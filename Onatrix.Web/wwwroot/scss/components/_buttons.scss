@@ -12,7 +12,7 @@
   line-height: 1.2;
 }
 
-.button-small {
+@mixin button-small {
   @include button;
   background-color: $color-main;
   color: $color-complement-1;
@@ -27,7 +27,7 @@
   }
 }
 
-.button-large {
+@mixin button-large {
   @include button;
   background-color: $color-complement-1;
   color: $color-main;
@@ -36,7 +36,17 @@
   &:hover {
     background-color: $color-complement-3;
   }
+
   &:focus {
-    outline: 2px solid lighten($color-complement-3, 20%);
+    outline: 2px solid lighten($color-complement-1, 20%);
   }
+}
+
+
+.button--small {
+  @include button-small
+  }
+
+.button--large {
+  @include button-large
 }

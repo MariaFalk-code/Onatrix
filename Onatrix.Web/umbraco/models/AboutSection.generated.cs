@@ -58,6 +58,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString AboutBody => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "aboutBody");
 
 		///<summary>
+		/// Image Caption
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("aboutCaption")]
+		public virtual string AboutCaption => this.Value<string>(_publishedValueFallback, "aboutCaption");
+
+		///<summary>
 		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
@@ -66,7 +74,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops AboutImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "aboutImage");
 
 		///<summary>
-		/// Label
+		/// Label: Toggle on in settings
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -74,15 +82,15 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string AboutLabel => this.Value<string>(_publishedValueFallback, "aboutLabel");
 
 		///<summary>
-		/// Subheading
+		/// Quote: CEO quote
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("aboutSubHeading")]
-		public virtual string AboutSubHeading => this.Value<string>(_publishedValueFallback, "aboutSubHeading");
+		[ImplementPropertyType("aboutQuote")]
+		public virtual string AboutQuote => this.Value<string>(_publishedValueFallback, "aboutQuote");
 
 		///<summary>
-		/// Title
+		/// Title: Toggle on in settings
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -90,11 +98,27 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string AboutTitle => this.Value<string>(_publishedValueFallback, "aboutTitle");
 
 		///<summary>
-		/// Caption
+		/// Callback Form: Will only be rendered on HomePage.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("caption")]
-		public virtual string Caption => this.Value<string>(_publishedValueFallback, "caption");
+		[ImplementPropertyType("callbackForm")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel CallbackForm => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "callbackForm");
+
+		///<summary>
+		/// Signature Caption
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("signatureCaption")]
+		public virtual string SignatureCaption => this.Value<string>(_publishedValueFallback, "signatureCaption");
+
+		///<summary>
+		/// Signature Image: CEO signature. Toggle on in settings.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("signatureImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SignatureImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "signatureImage");
 	}
 }

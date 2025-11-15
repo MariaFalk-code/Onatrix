@@ -1,6 +1,62 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Onatrix.Web.Models.ViewModels;
+
 @{
   var content = (ContentModels.ServiceSection)Model.Content;
-  var settings = Model.Settings as ContentModels.ServiceSettings; // Cast Model.Settings safely using 'as' to avoid null reference exceptions
+  var settings = Model.Settings as ContentModels.ServiceSettings;
+  var sectionColor = settings?.ServiceBgColor?.Color ?? "$color-bg";
+  var showLabel = settings?.ShowLabel == true;
+
+  var currentPage = Umbraco.AssignedContentItem;
+  var isHomePage = currentPage.ContentType.Alias == "homePage";
 }
+
+<section class="service-section" style="background-color:@sectionColor;">
+  <div class="container section">
+    <div class="service-content">
+
+      @if (showLabel) {
+        <span class="label">@content.ServiceLabel</span>
+      }
+      <h2>@content.ServiceTitle</h2>
+
+      @*Service Cards loop out here. The content for each card is extracted from the serviceDetailSection of each ServiceDetailsPage.
+         Max six cards is rendered on the homepage, otherwise all available cards will be rendered.*@
+
+       <div class="service-card__grid">
+        @if (content.ServiceCollection != null && content.ServiceCollection.Any())
+        {
+          var cardsToRender = isHomePage
+          ? content.ServiceCollection.Take(6)
+          : content.ServiceCollection;
+
+          @foreach (var page in cardsToRender)
+          {
+            var blocks = page.Value<Umbraco.Cms.Core.Models.Blocks.BlockListModel>("serviceDetailContent");
+
+            var detailBlock = blocks?
+            .Where(b => b.Content is ContentModels.ServiceDetailSection)
+            .Select(b => b.Content as ContentModels.ServiceDetailSection)
+            .FirstOrDefault();
+
+            if (detailBlock != null)
+            {
+              var viewModel = new ServiceCardViewModel
+              {
+                Detail = detailBlock,
+                LinkUrl = page.Url()
+              };
+
+              @await Html.PartialAsync("Partials/components/_ServiceCard", viewModel)
+            }
+          }
+        }
+          else 
+          {
+           <p>No details available at the moment. Please check back later!</p>
+          }
+      </div>
+    </div>
+  </div>
+</section>

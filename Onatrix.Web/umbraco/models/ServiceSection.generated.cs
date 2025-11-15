@@ -50,15 +50,15 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Service Cards
+		/// Service Collection
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("serviceCards")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListItem<global::Umbraco.Cms.Web.Common.PublishedModels.ServiceCards> ServiceCards => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListItem<global::Umbraco.Cms.Web.Common.PublishedModels.ServiceCards>>(_publishedValueFallback, "serviceCards");
+		[ImplementPropertyType("serviceCollection")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent> ServiceCollection => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent>>(_publishedValueFallback, "serviceCollection");
 
 		///<summary>
-		/// Label
+		/// Label: Toggle on in settings
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]

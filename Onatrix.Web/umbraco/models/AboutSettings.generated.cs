@@ -50,19 +50,18 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Section Background Color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("settingsBgColor")]
-		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor SettingsBgColor => this.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(_publishedValueFallback, "settingsBgColor");
-
-		///<summary>
 		/// Show Label
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[ImplementPropertyType("showLabel")]
 		public virtual bool ShowLabel => this.Value<bool>(_publishedValueFallback, "showLabel");
+
+		///<summary>
+		/// Show Signature
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[ImplementPropertyType("showSignature")]
+		public virtual bool ShowSignature => this.Value<bool>(_publishedValueFallback, "showSignature");
 
 		///<summary>
 		/// Show Title

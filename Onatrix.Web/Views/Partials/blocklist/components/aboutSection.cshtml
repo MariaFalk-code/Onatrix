@@ -1,5 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
 @{
+  var content = (ContentModels.AboutSection)Model.Content;
+  var settings = Model.Settings as ContentModels.AboutSettings;
+
+  var parentPage = Umbraco.AssignedContentItem;
+  var isHomePage = parentPage.ContentType.Alias == "homePage";
+  var showForm = isHomePage && content.CallbackForm != null && content.CallbackForm.Any();
+  var showLabel = settings?.ShowLabel == true;
+  var showTitle = settings?.ShowTitle == true;
+  var showSignature = settings?.ShowSignature == true;
 }
+
+<section class="@(isHomePage ? "layout--home" : "layout--about")">
+  <div class="container section">
+    <div class="about-content--block-1">
+
+      @if (showLabel) {
+        <span class="label">@content.AboutLabel</span>
+      }
+      @if (showTitle) {
+      <h2>@content.AboutTitle</h2>
+      }
+      <p class="about-quote">@content.AboutQuote</p>
+      <p> @content.AboutBody</p>
+
+      @if (showSignature){
+        <img src="@content.SignatureImage?.Url()" alt="CEO signature"/>
+        <span>@content.SignatureCaption</span>
+      }
+    </div>
+    <div class="about-content--block-2">
+      @if (showForm) {
+        var formBlock = content.CallbackForm?.FirstOrDefault();
+
+        if (formBlock != null)
+        {
+          <section class="contact-form--about">
+            @await Html.PartialAsync("BlockList/Components/ContactForm", formBlock)
+          </section>
+        }
+      }
+      else {
+        <div class="about-image">
+          <img src="@content.AboutImage?.Url()" alt="Image of CEO Tina Fox" />
+          <span>@content.AboutCaption</span>
+        </div>
+      }
+    </div>
+  </div>
+ </section>
