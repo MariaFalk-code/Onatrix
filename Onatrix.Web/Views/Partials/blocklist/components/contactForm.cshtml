@@ -3,4 +3,39 @@
 
 @{
   var content = (ContentModels.ContactForm)Model.Content;
+  var settings = Model.Settings as ContentModels.ContactFormSettings;
+
+  var showLabel = settings?.ShowLabel == true;
+  var showTitle = settings?.ShowTitle == true;
+  var showBody = settings?.ShowBody == true;
 }
+
+<section class="contact-form">
+  <div class="contact-form-wrapper">
+    @if (showLabel) {
+      <span class="label">@content.FormLabel</span>
+    }
+    @if (showTitle) {
+      <h2>@content.FormTitle</h2>
+    }
+    @if (showBody) {
+      <p>@content.FormBody</p>
+    }
+
+    <form class="contact-form-form" method="post">
+      <div class="contact-form-row">
+        <input type="text" placeholder="First name" disabled />
+        <input type="text" placeholder="Last name" disabled />
+      </div>
+      <input type="email" placeholder="Email address" disabled />
+      <input type="text" placeholder="Phone" disabled />
+      <select disabled>
+        <option disabled selected>Choose area of inquiry</option>
+        <option>Financial consulting</option>
+        <option>Legal services</option>
+        <option>Other</option>
+      </select>
+      <button type="submit" disabled>Submit</button>
+    </form>
+  </div>
+</section>
