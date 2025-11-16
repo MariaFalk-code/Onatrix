@@ -1,0 +1,16 @@
+﻿@use '../abstracts' as *;
+
+.partners-section {
+  .partners-content {
+    @include flex-center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .partner-logo {
+    flex: 0 1 auto;
+  }
+}
