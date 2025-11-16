@@ -11,6 +11,16 @@
     }
   }
 
+  &__form {
+    @include flex-column-center;
+    gap: 1rem;
+  }
+
+  &__row {
+    @include flex-column-center;
+    gap: 1rem;
+  }
+
   &__input {
     flex: 1 1 auto;
     width: 100%;
@@ -53,14 +63,12 @@
     .contact-form__form {
       @include flex-column-center;
       width: 100%;
-      gap: 1rem;
       padding-inline: 2rem;
-    
+
 
       .contact-form__row {
         @include flex-column-center;
         width: 100%;
-        gap: 1rem;
       }
 
       button {
@@ -70,15 +78,22 @@
   }
 
   &--detailpage {
+
+    h3 {
+      padding-bottom: 2rem;
+    }
     .contact-form__form {
       flex-direction: column;
+      width: 100%;
 
       .contact-form__row {
         flex-direction: row;
+        width: 100%;
       }
 
       button {
         @include button-small;
+        align-self: flex-start;
       }
     }
   }

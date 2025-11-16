@@ -1,0 +1,10 @@
+﻿@use '../abstracts' as *;
+
+contact-form--detailpage {
+  width: 100%
+  background-color: $color-bg;
+
+  .contact-form__content-wrapper {
+    width: 100%;
+  }
+}

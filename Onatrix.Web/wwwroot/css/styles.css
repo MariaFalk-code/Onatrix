@@ -230,6 +230,20 @@
   line-height: inherit;
   padding-bottom: 1rem;
 }
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-form__row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 .contact-form__input {
   flex: 1 1 auto;
   width: 100%;
@@ -272,7 +286,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 1rem;
   padding-inline: 2rem;
 }
 .contact-form--about .contact-form__form .contact-form__row {
@@ -281,7 +294,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 1rem;
 }
 .contact-form--about .contact-form__form button {
   display: inline-flex;
@@ -303,11 +315,16 @@
 .contact-form--about .contact-form__form button:focus {
   outline: 2px solid white;
 }
+.contact-form--detailpage h3 {
+  padding-bottom: 2rem;
+}
 .contact-form--detailpage .contact-form__form {
   flex-direction: column;
+  width: 100%;
 }
 .contact-form--detailpage .contact-form__form .contact-form__row {
   flex-direction: row;
+  width: 100%;
 }
 .contact-form--detailpage .contact-form__form button {
   display: inline-flex;
@@ -328,6 +345,9 @@
 }
 .contact-form--detailpage .contact-form__form button:focus {
   outline: 2px solid rgb(127.8571428571, 142.1428571429, 136.4285714286);
+}
+.contact-form--detailpage .contact-form__form button {
+  align-self: flex-start;
 }
 
 .contact-info-section {
