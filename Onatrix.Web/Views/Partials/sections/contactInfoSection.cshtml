@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IHasContactInfoSection>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+  var contactInfo = Model.ContactInfoReference as ContentModels.ContactInfo;
+}
+
+@if (contactInfo != null)
+{
+  <section class="contact-info-section">
+    <div class="container section">
+      @await Html.PartialAsync("Partials/components/_ContactInfo", contactInfo)
+    </div>
+  </section>
+}
