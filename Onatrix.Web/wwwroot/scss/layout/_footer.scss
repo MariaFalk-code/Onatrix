@@ -1,1 +1,18 @@
-﻿
+﻿@use '../abstracts' as *;
+
+.site-footer {
+  width: 100%;
+  background-color: $color-main;
+
+  .container {
+    @include flex-left;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    @include note-1;
+    font-style: normal;
+    color: $color-white;
+  }
+}

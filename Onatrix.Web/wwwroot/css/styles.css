@@ -403,6 +403,27 @@
   padding-bottom: 0.25rem;
 }
 
+.site-footer {
+  width: 100%;
+  background-color: #4F5955;
+}
+.site-footer .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.site-footer p {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  line-height: inherit;
+  font-style: normal;
+  color: #FFFFFF;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
