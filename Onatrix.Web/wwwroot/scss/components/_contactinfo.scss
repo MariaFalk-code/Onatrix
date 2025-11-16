@@ -1,0 +1,82 @@
+﻿@use '../abstracts' as *;
+
+.contact-info-section {
+  background-color: $color-bg-secondary;
+
+  .container {
+    @include flex-space-between;
+    gap: 12rem;
+  }
+
+  .section {
+    padding-top: 6rem;
+    padding-bottom: 0;
+
+    @media (max-width: 768px) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.contact-info {
+  &-images {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 3 / 4;
+    overflow: clip;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bg-shape {
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__bg-dots {
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__portrait {
+    z-index: 3;
+    top: 0;
+    left: 0;
+  }
+}
+
+.contact-info-content {
+  width: 100%;
+
+  div {
+    padding-bottom: 1rem;
+    display: block;
+  }
+
+  h2 {
+    padding-bottom: 2rem;
+    display: block;
+  }
+
+  .h-mini {
+    color: $color-main;
+    font-weight: 600;
+  }
+
+  p {
+    padding-bottom: 0.25rem;
+  }
+}

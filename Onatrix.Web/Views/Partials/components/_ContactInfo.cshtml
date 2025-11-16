@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ContactInfo>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+  var content = Model;
+
+  var rootContent = Umbraco.ContentAtRoot();
+  var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+  var address = siteSettings?.Address ?? "temporarily unavailable";
+  var phone = siteSettings?.Phone ?? "temporarily unavailable";
+  var email = siteSettings?.Email ?? "temporarily unavailable";
+}
+
+@* Wrapped in section-tag and container by the parent view hasContactInfoSection. *@
+<div class="contact-info-images">
+  <img src="/images/Bg-contactinfo.svg" alt="" class="contact-info__bg-shape" />
+  <img src="/images/Dot-contactinfo.png" alt="" class="contact-info__bg-dots" />
+  <img src="@content.Image?.Url()" alt="portrait" class="contact-info__portrait" />
+</div>
+<div class="contact-info-content">
+  <h2>@content.Title</h2>
+  <div>
+    <p class="h-mini">Office location</p>
+    <p>@address</p>
+  </div>
+  <div>
+    <p class ="h-mini">Phone number</p>
+    <p class="italic">@phone</p>
+  </div>
+  <div>
+    <p class ="h-mini">E-mail address</p>
+    <p class="italic">@email</p>
+  </div>
+</div>
+

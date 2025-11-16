@@ -330,6 +330,79 @@
   outline: 2px solid rgb(127.8571428571, 142.1428571429, 136.4285714286);
 }
 
+.contact-info-section {
+  background-color: #F7F7F7;
+}
+.contact-info-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12rem;
+}
+.contact-info-section .section {
+  padding-top: 6rem;
+  padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .contact-info-section .section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.contact-info-images {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 3/4;
+  overflow: clip;
+}
+@media (max-width: 768px) {
+  .contact-info-images {
+    display: none;
+  }
+}
+.contact-info-images img {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.contact-info__bg-shape {
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+}
+.contact-info__bg-dots {
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+}
+.contact-info__portrait {
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+.contact-info-content {
+  width: 100%;
+}
+.contact-info-content div {
+  padding-bottom: 1rem;
+  display: block;
+}
+.contact-info-content h2 {
+  padding-bottom: 2rem;
+  display: block;
+}
+.contact-info-content .h-mini {
+  color: #4F5955;
+  font-weight: 600;
+}
+.contact-info-content p {
+  padding-bottom: 0.25rem;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -354,6 +427,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   text-wrap: balance;
   padding-bottom: 1rem;
+}
+
+.italic {
+  font-style: italic;
 }
 
 a {
