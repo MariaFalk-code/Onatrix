@@ -424,6 +424,29 @@
   color: #FFFFFF;
 }
 
+.page-header {
+  background-color: #F7F7F7;
+}
+.page-header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page-header .section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.bottom-section ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-section li.active {
+  color: #D9C3A9;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
