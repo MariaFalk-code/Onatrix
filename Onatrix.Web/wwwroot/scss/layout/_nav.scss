@@ -1,2 +1,34 @@
-﻿body {
+﻿@use '../abstracts' as *;
+
+.top-nav {
+  background-color: $color-bg;
+
+  .container {
+    @include flex-space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
+
+.top-nav__list {
+  @include flex-center;
+  gap: 3rem;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+
+  li {
+    @include sub-title-2;
+    color: $color-main;
+  }
+
+  a:hover {
+    color: $color-complement-3;
+  }
+
+  li.current {
+    color: $color-complement-3;
+  }
+}
+

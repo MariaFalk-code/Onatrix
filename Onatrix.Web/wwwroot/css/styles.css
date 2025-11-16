@@ -466,6 +466,42 @@
   color: #FFFFFF;
 }
 
+.top-nav {
+  background-color: #FFFFFF;
+}
+.top-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.top-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+@media (max-width: 768px) {
+  .top-nav__list {
+    gap: 1rem;
+  }
+}
+.top-nav__list li {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  color: #4F5955;
+}
+.top-nav__list a:hover {
+  color: #D9C3A9;
+}
+.top-nav__list li.current {
+  color: #D9C3A9;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
