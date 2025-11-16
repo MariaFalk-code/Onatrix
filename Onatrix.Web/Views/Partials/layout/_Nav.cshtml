@@ -20,37 +20,39 @@
   var selection = Model.Root().Children().Where(x => x.IsVisible(PublishedValueFallback)).ToArray();
 }
 
-<header>
-  <div class="logo">
-    @if (logo != null)
-    {
-      <a href="@Url.Content("~/")">
-        <img src="@logo.Url()" alt="@siteName" />
-      </a>
-    }
-    else if (!string.IsNullOrEmpty(siteName))
-    {
-      <a href="@Url.Content("~/")">@siteName</a>
-    }
-    else
-    {
-      <a href="@Url.Content("~/")">Onatrix</a>
-    }
-  </div>
-  <nav>
-    @if (selection?.Length > 0)
-    {
-      <ul>
-        @foreach (var item in selection)
-        {
-          <li class="@(item.IsAncestorOrSelf(Model) ? "current" : null)">
-            <a href="@item.Url(PublishedUrlProvider)">@item.Name</a>
-          </li>
-        }
-      </ul>
-    }
-  </nav>
-  <div>
-    <a href="@Url.Content("~/search")"><i class="fas fa-search"></i></a>
+<header class="top-nav">
+  <div class="container">
+    <div class="logo">
+      @if (logo != null)
+      {
+        <a href="@Url.Content("~/")">
+          <img src="@logo.Url()" alt="@siteName" />
+        </a>
+      }
+      else if (!string.IsNullOrEmpty(siteName))
+      {
+        <a href="@Url.Content("~/")">@siteName</a>
+      }
+      else
+      {
+        <a href="@Url.Content("~/")">Onatrix</a>
+      }
+    </div>
+    <nav class="top-nav__nav">
+      @if (selection?.Length > 0)
+      {
+        <ul class ="top-nav__list">
+          @foreach (var item in selection)
+          {
+            <li class="@(item.IsAncestorOrSelf(Model) ? "current" : null)">
+              <a href="@item.Url(PublishedUrlProvider)">@item.Name</a>
+            </li>
+          }
+        </ul>
+      }
+    </nav>
+    <div>
+      <a href="@Url.Content("/contact")"><i class="fas fa-search"></i></a>
+    </div>
   </div>
 </header>

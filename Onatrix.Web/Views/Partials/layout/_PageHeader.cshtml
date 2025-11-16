@@ -16,26 +16,28 @@
 
 @{ var selection = Model.Ancestors().ToArray(); }
 
-<header>
-  <div>
-    <h1>@Model.PageTitle</h1>
-  </div>
-  <div>
-    @if (selection?.Length > 0)
-    {
-      <ul class="breadcrumb">
-        @* For each page in the ancestors collection which have been ordered by Level (so we start with the highest top node first) *@
-        @foreach (var item in selection.OrderBy(x => x.Level))
-        {
-          <li>
-            <a href="@item.Url(PublishedUrlProvider)">@item.Name</a> 
-            <i class="fa-solid fa-angle-right"></i>
-          </li>
-        }
+<header class="page-header">
+  <div class="container section">
+    <div class="top-section">
+      <h1>@Model.PageTitle</h1>
+    </div>
+    <div class="bottom-section">
+      @if (selection?.Length > 0)
+      {
+        <ul class="breadcrumb">
+          @* For each page in the ancestors collection which have been ordered by Level (so we start with the highest top node first) *@
+          @foreach (var item in selection.OrderBy(x => x.Level))
+          {
+            <li>
+              <a href="@item.Url(PublishedUrlProvider)">@item.Name</a> 
+              <i class="fa-solid fa-angle-right"></i>
+            </li>
+          }
 
-        @* Display the current page as the last item in the list *@
-        <li class="active">@Model.Name</li>
-      </ul>
-    }
+          @* Display the current page as the last item in the list *@
+          <li class="active">@Model.Name</li>
+        </ul>
+      }
+    </div>
   </div>
 </header>

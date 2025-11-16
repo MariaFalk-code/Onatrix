@@ -1,11 +1,11 @@
 ﻿@use '../abstracts' as *;
 
-.site-footer {
+.top-bar {
   width: 100%;
   background-color: $color-main;
 
   .container {
-    @include flex-left;
+    @include flex-space-between;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
@@ -15,4 +15,14 @@
     font-style: normal;
     color: $color-white;
   }
+
+  .icon-list {
+    @include flex-right;
+    gap: 0.75rem;
+  }
+
+  .top-bar-icon {
+    color: $color-white;
+  }
 }
+

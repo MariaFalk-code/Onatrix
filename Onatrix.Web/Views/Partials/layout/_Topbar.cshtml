@@ -8,42 +8,45 @@
   var address = siteSettings?.Address ?? "";
 }
 
-<section>
-  <div>
-    <p>@address</p>
-
+<section class="top-bar">
+  <div class="container">
+    <div>
+      <p>@address</p>
+    </div>
     @if (siteSettings?.SocialMediaList != null && siteSettings.SocialMediaList.Any())
     {
-      <ul>
-        @foreach (var platform in siteSettings.SocialMediaList)
-        {
-          if (platform.Content is SocialMediaItem socialMediaItem)
+      <div>
+        <ul class="icon-list">
+          @foreach (var platform in siteSettings.SocialMediaList)
           {
-            var iconClass = socialMediaItem.PlatformName?.ToLower() switch
+            if (platform.Content is SocialMediaItem socialMediaItem)
             {
-              "facebook" => "fab fa-facebook-f",
-              "x" => "fab fa-x-twitter",
-              "linkedin" => "fab fa-linkedin-in",
-              "tiktok" => "fab fa-tiktok",
-              "instagram" => "fab fa-instagram",
-              _ => null
-            };
+              var iconClass = socialMediaItem.PlatformName?.ToLower() switch
+              {
+                "facebook" => "fab fa-facebook-f",
+                "x" => "fab fa-x-twitter",
+                "linkedin" => "fab fa-linkedin-in",
+                "tiktok" => "fab fa-tiktok",
+                "instagram" => "fab fa-instagram",
+                _ => null
+              };
 
-            if (iconClass != null)
-            {
-              <li>
-                <a href="@socialMediaItem.PlatformAccountUrl" target="_blank">
-                  <i class="@iconClass"></i>
-                </a>
-              </li>
-            }
-            else
-            {
-              <li>Unsupported Platform: @socialMediaItem.PlatformName</li>
+              if (iconClass != null)
+              {
+                <li>
+                  <a href="@socialMediaItem.PlatformAccountUrl" target="_blank">
+                    <i class="@iconClass top-bar-icon"></i>
+                  </a>
+                </li>
+              }
+              else
+              {
+                <li>Unsupported Platform: @socialMediaItem.PlatformName</li>
+              }
             }
           }
-        }
-      </ul>
+        </ul>
+      </div>
     }
   </div>
 </section>

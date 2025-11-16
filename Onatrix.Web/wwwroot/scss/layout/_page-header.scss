@@ -1,1 +1,29 @@
-﻿
+﻿@use '../abstracts' as *;
+
+.page-header {
+  background-color: $color-bg-secondary;
+
+  .container {
+    @include flex-column-center;
+  }
+
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.top-section {
+
+}
+
+.bottom-section {
+
+  ul {
+    @include flex-center;
+  }
+
+  li.active {
+    color: $color-complement-3;
+  }
+}
