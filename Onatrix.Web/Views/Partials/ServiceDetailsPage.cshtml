@@ -1,5 +1,5 @@
 ﻿@using Umbraco.Cms.Core.Models.Blocks
-@using Umbraco.Cms.Web.Common.PublishedModels;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ServiceDetailsPage>
 @{
   Layout = "mainLayout.cshtml";
@@ -7,6 +7,21 @@
 
 <partial name="layout/_PageHeader" model="Model as IHasPageHeader" />
 
-@Html.GetBlockListHtml(Model.ServiceDetailContent)
+@if (Model.ServiceDetailContent != null)
+{
+    foreach (var block in Model.ServiceDetailContent)
+    {
+        if (block.Content is ContentModels.ContactForm)
+        {
+            <section class="contact-form--detailpage container section">
+                @await Html.PartialAsync("BlockList/Components/ContactForm", block)
+            </section>
+        }
+        else
+        {
+            @await Html.PartialAsync($"BlockList/Components/{block.Content.ContentType.Alias}", block)
+        }
+    }
+}
 
 <partial name="Partials/sections/contactInfoSection" model="Model as IHasContactInfoSection" />

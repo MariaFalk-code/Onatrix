@@ -1,5 +1,4 @@
 ﻿@use '../abstracts' as *;
-@use 'buttons' as *;
 
 .contact-form {
   //Shared styles
@@ -9,6 +8,16 @@
       @include note-1;
       padding-bottom: 1rem;
     }
+  }
+
+  &__form {
+    @include flex-column-center;
+    gap: 1rem;
+  }
+
+  &__row {
+    @include flex-column-center;
+    gap: 1rem;
   }
 
   &__input {
@@ -35,51 +44,6 @@
     border-radius: 3px;
     background-color: $color-bg;
   }
-  //page-specific styles
-
-  &--about {
-    h3 {
-      color: $color-complement-1;
-      padding: 2rem;
-      width: 100%;
-      background-color: $color-main;
-    }
-
-    p {
-      padding-top: 1rem;
-      padding-inline: 2rem;
-    }
-
-    .contact-form__form {
-      @include flex-column-center;
-      width: 100%;
-      gap: 1rem;
-      padding-inline: 2rem;
-    
-
-      .contact-form__row {
-        @include flex-column-center;
-        width: 100%;
-        gap: 1rem;
-      }
-
-      button {
-        @include button-large;
-      }
-    }
-  }
-
-  &--detailpage {
-    .contact-form__form {
-      flex-direction: column;
-
-      .contact-form__row {
-        flex-direction: row;
-      }
-
-      button {
-        @include button-small;
-      }
-    }
-  }
 }
+
+  //page-specific styles is found in the respective page scss files.
