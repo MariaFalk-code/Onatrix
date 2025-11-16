@@ -1,18 +1,18 @@
-﻿.rte-heading-l {
+﻿.rte-heading--l {
   font-size: 25px;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   line-height: 1.25;
 }
 
-.rte-heading-m {
+.rte-heading--m {
   font-size: 20px;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   line-height: 1.25;
 }
 
-.rte-heading-s {
+.rte-heading--s {
   font-size: 18px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -53,10 +53,10 @@ img {
   color: #D9C3A9;
 }
 
-.color-body-text {
+.color-body--text {
   color: #535656;
 }
 
-.color-body-light {
+.color-body--light {
   color: #9C9EA6;
 }
