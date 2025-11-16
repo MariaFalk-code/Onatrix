@@ -1,2 +1,47 @@
-﻿
+﻿@use '../abstracts' as *;
+@use '../components' as *;
 
+.contact-form--home {
+  @include box-shadow-soft;
+  border-radius: 3px;
+  background-color: $color-bg;
+  width: clamp(20rem, 90vw, 28rem);
+  padding-bottom: 2rem;
+  margin-left: 1rem;
+  transform: translateY(-4rem);
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    transform: none;
+    margin-top: 2rem;
+  }
+
+  h3 {
+    color: $color-complement-1;
+    padding: 2rem;
+    width: 100%;
+    background-color: $color-main;
+  }
+
+  p {
+    padding-top: 1rem;
+    padding-inline: 2rem;
+  }
+
+  .contact-form__form {
+    @include flex-column-center;
+    width: 100%;
+    padding-inline: 2rem;
+
+
+    .contact-form__row {
+      @include flex-column-center;
+      width: 100%;
+    }
+
+    button {
+      @include button-large;
+    }
+  }
+}

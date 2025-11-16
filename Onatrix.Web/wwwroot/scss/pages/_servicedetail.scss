@@ -1,0 +1,30 @@
+﻿@use '../abstracts' as *;
+@use '../components' as *;
+
+contact-form--detailpage {
+  width: 100%;
+  background-color: $color-bg;
+
+  .contact-form__content-wrapper {
+    width: 100%;
+  }
+
+  h3 {
+    padding-bottom: 2rem;
+  }
+}
+
+.contact-form__form {
+  flex-direction: column;
+  width: 100%;
+
+  .contact-form__row {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  button {
+    @include button-small;
+    align-self: flex-start;
+  }
+}

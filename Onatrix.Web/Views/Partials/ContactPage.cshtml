@@ -1,5 +1,5 @@
 ﻿@using Umbraco.Cms.Core.Models.Blocks
-@using Umbraco.Cms.Web.Common.PublishedModels;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContactPage>
 @{
   Layout = "mainLayout.cshtml";
@@ -9,4 +9,20 @@
 
 <partial name="Partials/sections/contactInfoSection" model="Model as IHasContactInfoSection" />
 
-@Html.GetBlockListHtml(Model.ContactContent)
+@if (Model.ContactContent != null)
+{
+  foreach (var block in Model.ContactContent)
+  {
+    if (block.Content is ContentModels.ContactForm)
+    {
+      <section class="contact-form--contactpage container">
+   @*   <img src="@Model.BgImage?.Url()" class="map-bg" alt="Map background" /> *@
+        @await Html.PartialAsync("BlockList/Components/ContactForm", block)
+      </section>
+    }
+    else
+    {
+      @await Html.PartialAsync($"BlockList/Components/{block.Content.ContentType.Alias}", block)
+    }
+  }
+}
